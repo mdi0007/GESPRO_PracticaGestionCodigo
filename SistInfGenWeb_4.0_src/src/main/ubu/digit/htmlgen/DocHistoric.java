@@ -230,7 +230,7 @@ public class DocHistoric extends DocSistInfHtml {
         List<Number> nTotalAlumnos = new ArrayList<Number>();
         List<Number> nTotalTutores = new ArrayList<Number>();
 
-        while (keyMin < keyMax) {
+        while (keyMin <= keyMax) {
             nTotalProject.add(cursosDefNuevos.get(keyMin).size());
             nTotalAlumnos.add(calcularCountAlumnos().get(keyMin));
             nTotalTutores.add(calcularCountTutores().get(keyMin));
@@ -386,7 +386,7 @@ public class DocHistoric extends DocSistInfHtml {
         int keyMin = obtenerCurso(true).get(Calendar.YEAR);
         int keyMax = obtenerCurso(false).get(Calendar.YEAR);
         Map<Integer, Number> nMediaFechas = new HashMap<Integer, Number>();
-        while (keyMin < keyMax) {
+        while (keyMin <= keyMax) {
             List current = new ArrayList();
             double media = 0;
             if (cursosDefNuevos.containsKey(keyMin)) {
@@ -414,7 +414,7 @@ public class DocHistoric extends DocSistInfHtml {
         int keyMin = obtenerCurso(true).get(Calendar.YEAR);
         int keyMax = obtenerCurso(false).get(Calendar.YEAR);
         Map<Integer, Number> nMediaNotas = new HashMap<Integer, Number>();
-        while (keyMin < keyMax) {
+        while (keyMin <= keyMax) {
             List current = new ArrayList();
             double media = 0;
             if (cursosDefNuevos.containsKey(keyMin)) {
@@ -441,7 +441,7 @@ public class DocHistoric extends DocSistInfHtml {
         int keyMin = obtenerCurso(true).get(Calendar.YEAR);
         int keyMax = obtenerCurso(false).get(Calendar.YEAR);
         Map<Integer, Number> nCountAlumnos = new HashMap<Integer, Number>();
-        while (keyMin < keyMax) {
+        while (keyMin <= keyMax) {
             List current = new ArrayList();
             int alumnos = 0;
             if (cursosDefNuevos.containsKey(keyMin)) {
@@ -474,7 +474,7 @@ public class DocHistoric extends DocSistInfHtml {
         int keyMin = obtenerCurso(true).get(Calendar.YEAR);
         int keyMax = obtenerCurso(false).get(Calendar.YEAR);
         Map<Integer, Number> nCountTutores = new HashMap<Integer, Number>();
-        while (keyMin < keyMax) {
+        while (keyMin <= keyMax) {
             List current = new ArrayList();
             int tutores = 0;
             if (cursosDefNuevos.containsKey(keyMin)) {
@@ -652,7 +652,7 @@ public class DocHistoric extends DocSistInfHtml {
     private void prepararProyectos() throws SQLException {
         int keyMin = obtenerCurso(true).get(Calendar.YEAR);
         int keyMax = obtenerCurso(false).get(Calendar.YEAR);
-        while (keyMin < keyMax) {
+        while (keyMin <= keyMax) {
             List current = new ArrayList();
             for (int index = 0; index < cursosBorr.get(keyMin).size(); index++) {
                 current = (ArrayList) cursosBorr.get(keyMin).get(index);
